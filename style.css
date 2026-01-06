@@ -1,0 +1,55 @@
+/* Pengaturan Dasar */
+body {
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #f9fafb;
+}
+
+.font-serif {
+    font-family: 'Merriweather', serif;
+}
+
+/* Custom Scrollbar (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e3a8a;
+    border-radius: 4px;
+}
+
+/* Section Layout */
+.section-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px; 
+}
+
+/* Navigasi Hover Animation */
+.nav-link {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #f59e0b;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
